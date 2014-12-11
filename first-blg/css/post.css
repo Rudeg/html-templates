@@ -1,0 +1,15 @@
+/* line 1, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/post.sass */
+.post {
+  margin-top: 80px; }
+  /* line 4, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/post.sass */
+  .post .post__header {
+    position: relative; }
+    /* line 6, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/post.sass */
+    .post .post__header .post__date {
+      position: absolute;
+      left: -90px;
+      font-size: 30px;
+      font-weight: bold; }
+    /* line 14, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/post.sass */
+    .post .post__header .post__info .post__category, .post .post__header .post__info .post__likes, .post .post__header .post__info .post__comments {
+      display: inline-block; }

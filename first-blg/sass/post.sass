@@ -1,0 +1,109 @@
+.post
+    @extend %in
+    margin-top: 60px
+    .post__header
+        position: relative
+        .post__date
+            position: absolute
+            transform: translate(-100%, -25%)
+            height: 110px
+            width: 110px
+            line-height: 110px
+            text-align: center
+            border: 7px solid #ebebeb
+            border-radius: 65px
+            color: $main
+            font:
+                size: 30px
+                weight: bold
+        .post__info
+            height: 32px
+            line-height: 35px
+            color: #cacaca
+            font:
+                size: 14px
+            border-bottom: 1px solid #ebebeb
+            .post__category,
+            .post__likes, .post__comments
+                display: inline-block
+                padding: 0 10px 0 0
+                &:first-of-type
+                    padding-left: 10px
+                &:not(:last-of-type):after
+                    content: ''
+                    padding-right: 10px
+                    border-right: 1px solid #ebebeb
+            .post__likes
+                position: relative
+                padding-left: 17px
+                cursor: pointer
+                &:before
+                    content: ''
+                    background-image: url("../img/likes__icon.png")
+                    width: 18px
+                    height: 14px
+                    display: inline-block
+                    line-height: -26px
+                    position: absolute
+                    top: 10px
+                    left: -5px
+            .post__comments
+                position: relative
+                padding-left: 17px
+                cursor: pointer
+                &:before
+                    content: ''
+                    background-image: url("../img/comments__icon.png")
+                    width: 16px
+                    height: 14px
+                    display: inline-block
+                    line-height: -26px
+                    position: absolute
+                    top: 11px
+                    left: -5px
+    .post__body
+        margin: 25px 10px
+        .post__header
+            margin: 0 0 20px 0
+            font:
+                size: 30px
+                weight: bold
+        .body__par
+            color: #bbb
+            margin: 0 0 30px 0
+            font:
+                size: 16px
+            .post__img
+                display: block
+                margin: auto
+        .post__tags
+            padding: 0 0 30px 95px
+            border-bottom: 1px solid #ebebeb
+            .tags__title
+                margin: 0 10px 0 0
+                font:
+                    size: 18px
+                    weight: bold
+            .tags__list
+                display: inline-block
+                .tag__item
+                    display: inline-block
+                    margin: 0 3px 0 0
+        .post__footer
+            display: inline-block
+            height: 90px
+            line-height: 90px
+            width: 100%
+            border-bottom: 2px solid #e6e6e6
+            .body__comments
+                display: inline-block
+                font:
+                    size: 24px
+                    weight: bold
+            .next__story
+                float: right
+                height: 100%
+                .btn
+                    font:
+                        size: 16px
+                        weight: normal

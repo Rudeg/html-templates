@@ -1,0 +1,69 @@
+.comment__form
+    @extend %in
+    text-align: center
+    border-bottom: 2px solid #e6e6e6
+    padding-bottom: 30px
+    .col1
+        width: 17%
+    .col2
+        width: 40%
+    .form__row
+        margin: 0 0 15px 0
+        position: relative
+        .comments__ta
+            height: 200px
+    .input__wrap
+        display: inline-block
+        text-align: left
+        .input
+            width: 40%
+            &:nth-child(odd)
+                float: right
+    .textarea__wrap
+        display: inline-block
+        .textarea
+            width: calc(100% - 30px)
+    .textarea__label
+        position: absolute
+        transform: translate(-105%, 0)
+        padding-left: 1%
+    .form__title
+        padding-bottom: 30px
+        font:
+            size: 24px
+            weight: bold
+
+
+.comments
+    @extend %in
+    .comment__item
+        margin-top: 50px
+        .comment__avatar
+            display: inline-block
+            width: 115px
+            height: 115px
+            transform: translate(0, -94%)
+            background-color: #ebebeb
+            border-radius: 50%
+        .comment__wrap
+            display: inline-block
+            width: 80%
+            padding-left: 12px
+            .comment__author
+                margin-bottom: 20px
+                font:
+                    size: 24px
+                    weight: bold
+            .comment__body
+                padding: 17px 13px
+                background-color: #ebebeb
+                border-radius: 3px
+                color: #565656
+                font:
+                    size: 16px
+            .reply__btn
+                display: block
+                margin: 15px
+    .more_comments__btn
+        display: block
+        margin: 60px auto

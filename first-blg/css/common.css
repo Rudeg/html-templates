@@ -1,0 +1,39 @@
+/* line 3, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/common.sass */
+.link {
+  text-decoration: none;
+  color: #3eb3a5; }
+  /* line 6, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/common.sass */
+  .link:hover {
+    color: #079281; }
+
+/* line 9, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/common.sass */
+.btn {
+  color: #fff;
+  background-color: #3eb3a5;
+  padding: 15px 25px;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: bold; }
+  /* line 17, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/common.sass */
+  .btn:hover {
+    background-color: #079281; }
+
+/* line 20, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/common.sass */
+.label {
+  display: inline-block;
+  color: #8e8e8e;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold; }
+
+/* line 28, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/common.sass */
+.input, .textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 3px;
+  color: #888b8b;
+  background-color: #ebebeb; }
+
+/* line 35, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/common.sass */
+.textarea {
+  resize: none; }

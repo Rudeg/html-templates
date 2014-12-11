@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="header__bg"></div>
+    <ul class="header__menu">
+      <li class="menu__item active"><a class="item__link" href="#">Home</a></li>
+      <li class="menu__item"><a class="item__link" href="#">About</a></li>
+      <li class="menu__item menu__avatar"><a href="#"></a></li>
+      <li class="menu__item"><a class="item__link" href="#">Category</a></li>
+      <li class="menu__item"><a class="item__link" href="#">Contact</a></li>
+    </ul>
+  </header>
+
+  <section class="post">
+    <div class="post__header">
+      <div class="post__date">31 Jul</div>
+      <div class="post__info">
+        <div class="post__category">cat: <a class="link category__link" href="#">Diary, Personal</a></div>
+        <div class="post__likes">136 Likes</div>
+        <div class="post__comments"><i></i>21 Comments</div>
+      </div>
+    </div>
+
+    <div class="post__body">
+      <h3 class="post__header">Lorem Ipsum Dolor Sit Amet</h3>
+      <p class="body__par">
+        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+        Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+      </p>
+      <p class="body__par">
+        Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+        Sed non  mauris vitae erat consequat auctor eu in elit.
+        Class aptent taciti. sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit.
+        Sed ut imperdiet nisi. Proin condimentum fermentum nunc.
+        Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque.
+        Suspendisse in orci enim.
+      </p>
+      <p class="body__par">
+        <img class="post__img" src="img/post__img.jpg" alt="post_img" />
+      </p>
+      <div class="post__tags">
+        <span class="tags__title">TAGS</span>
+        <ul class="tags__list">
+          <li class="tag__item"><a class="link" href="#">holiday,</a></li>
+          <li class="tag__item"><a class="link" href="#">diary,</a></li>
+          <li class="tag__item"><a class="link" href="#">bestmomments</a></li>
+        </ul>
+      </div>
+
+      <div class="post__footer">
+        <div class="body__comments">21 Comments</div>
+        <div class="next__story"><button type="button" class="btn">Next Stories &gt;</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comment__form">
+    <h5 class="form__title">Post A Comment</h5>
+    <div class="form__row">
+      <label class="col1 label" for="name">Use Your Real Name</label>
+      <div class="input__wrap col2">
+        <input class="input" type="text" name="name" id="name" placeholder="Name"/>
+        <input class="input" type="email" name="email" id="email" placeholder="Email"/>
+      </div>
+      <label class="col1 label" for="email">Email Will not published</label>
+    </div>
+    <div class="form__row">
+      <label class="col1 label textarea__label" for="comments">Write a good comment</label>
+      <div class="textarea__wrap col2">
+        <textarea class="textarea comments__ta" name="Comments" id="comments"></textarea>
+      </div>
+    </div>
+    <div class="form__row">
+      <button type="button" class="btn post__btn col2">Post</button>
+    </div>
+  </section>
+
+  <section class="comments">
+    <div class="comment__item">
+      <div class="avatar comment__avatar"></div>
+      <div class="comment__wrap">
+        <div class="comment__author"><a class="link" href="#">John Doe</a></div>
+        <div class="comment__body">
+          This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+          Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+          Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+          Nam nec tellus a odio tincidunt auctor a ornare odio.
+        </div>
+      <a href="#" class="link reply__btn">Reply</a>
+      </div>
+    </div>
+
+    <div class="comment__item">
+      <div class="avatar comment__avatar"></div>
+      <div class="comment__wrap">
+        <div class="comment__author"><a class="link" href="#">John Doe</a></div>
+        <div class="comment__body">
+          This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+          Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+          Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+          Nam nec tellus a odio tincidunt auctor a ornare odio.
+        </div>
+        <a href="#" class="link reply__btn">Reply</a>
+      </div>
+    </div>
+    <button type="button" class="btn more_comments__btn">Show More Comments</button>
+  </section>
+
+  <footer class="footer">
+    <div class="copyrights">Copyrights (c) <a class="link" href="#">Fikristudio</a> 2014</div>
+  </footer>
+</body>
+</html>

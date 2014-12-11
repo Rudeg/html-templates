@@ -1,0 +1,15 @@
+/* line 5, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/layout.sass */
+.footer {
+  width: 75%;
+  margin: 0 auto; }
+
+/* line 9, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/layout.sass */
+body {
+  width: 100%;
+  font-family: sans-serif; }
+
+/* line 14, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/layout.sass */
+.footer {
+  text-align: center;
+  margin: 40px auto 40px auto;
+  color: #c6c6c6; }
