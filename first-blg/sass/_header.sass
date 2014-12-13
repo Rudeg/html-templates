@@ -15,9 +15,13 @@
         height: 82px
         line-height: 82px
         text-align: center
+        @include mobile
+            line-height: 1.5
         .menu__item
             display: inline-block
             width: 17%
+            @include mobile
+                width: 49%
             &.active .item__link
                 color: $main
             .item__link
@@ -31,6 +35,10 @@
                     color: $main
             &:nth-of-type(2)
                 margin-right: 8%
+                @include tablet
+                    margin-right: 0
+                @include mobile
+                    margin-right: 0
         .menu__avatar
             background-image: url("../img/main__avatar.jpg")
             width: 197px
@@ -42,3 +50,11 @@
             cursor: pointer
             &+.menu__item
                 margin-left: 8%
+            @include tablet
+                display: none
+                &+.menu__item
+                    margin-left: 0
+            @include mobile
+                display: none
+                &+.menu__item
+                    margin-left: 0
