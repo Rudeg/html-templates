@@ -3,10 +3,24 @@
     text-align: center
     border-bottom: 2px solid #e6e6e6
     padding-bottom: 30px
+    @include tablet
+        width: 95%
+    @include mobile
+        width: 95%
     .col1
-        width: 17%
+        width: 27%
+        @include mobile
+            width: 21%
     .col2
         width: 40%
+        @include mobile
+            width: 50%
+    .label__left
+        padding-right: 2%
+        text-align: right
+    .label__right
+        padding-left: 2%
+        text-align: left
     .form__row
         margin: 0 0 15px 0
         position: relative
@@ -17,6 +31,10 @@
         text-align: left
         .input
             width: 40%
+            @include tablet
+                width: 39%
+            @include mobile
+                width: 32%
             &:nth-child(odd)
                 float: right
     .textarea__wrap
@@ -25,8 +43,7 @@
             width: calc(100% - 30px)
     .textarea__label
         position: absolute
-        transform: translate(-105%, 0)
-        padding-left: 1%
+        transform: translate(-102%, 0)
     .form__title
         padding-bottom: 30px
         font:
@@ -36,8 +53,15 @@
 
 .comments
     @extend %in
+    @include tablet
+        width: 90%
+    @include mobile
+        width: 90%
     .comment__item
-        margin-top: 50px
+        padding-top: 6%
+        @include mobile
+            position: relative
+            text-align: center
         .comment__avatar
             display: inline-block
             width: 115px
@@ -45,10 +69,19 @@
             transform: translate(0, -94%)
             background-color: #ebebeb
             border-radius: 50%
+            @include mobile
+                position: absolute
+                right: 30px
+                top: 7px
+                width: 57px
+                height: 57px
+                transform: none
         .comment__wrap
             display: inline-block
             width: 80%
             padding-left: 12px
+            @include mobile
+                text-align: left
             .comment__author
                 margin-bottom: 20px
                 font:

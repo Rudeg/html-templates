@@ -1,0 +1,125 @@
+footer
+    background-color: #2f4052
+    color: #8c9aa8
+    .link
+        color: #8c9aa8
+        text-decoration: none
+    .footer__info, .footer__copy
+        @extend %in
+    .footer__info
+        @extend %justify-align
+        padding: 50px 0
+        @include mobile
+            padding: 30px 0
+        .info__block
+            display: inline-table
+            width: 22.5%
+            @include mobile
+                width: 48.5%
+                &:nth-last-child(-n+2)
+                    margin-top: 20px
+            .info__title
+                color: #fff
+                font-size: 14px
+                text-transform: uppercase
+                padding-bottom: 15px
+            .info__content
+                line-height: 1.5
+                font:
+                    size: 12px
+                .address, .phone, .email
+                    padding-left: 15px
+                    line-height: 18px
+                    &:before
+                        content: ''
+                        display: inline-block
+                        position: absolute
+                .address
+                    padding-top: 15px
+                    &:before
+                        background-image: url('../img/icon_geo.png')
+                        height: 12px
+                        width: 7px
+                        transform: translate(-200%, 15%)
+                .phone
+                    &:before
+                        background-image: url('../img/icon_phone.png')
+                        height: 13px
+                        width: 7px
+                        transform: translate(-200%, 15%)
+                .email
+                    &:before
+                        background-image: url('../img/icon_mail.png')
+                        height: 9px
+                        width: 11px
+                        transform: translate(-145%, 44%)
+                .adress
+                    padding-top: 10px
+                .more__link
+                    display: inline-block
+                    margin-top: 10px
+                    &:after
+                        content: "\2192"
+                        padding-left: 5px
+                .subscribe
+                    padding-top: 15px
+                    position: relative
+                    .input
+                        width: 100%
+                        display: inline-block
+                    .btn
+                        position: absolute
+                        top: 21px
+                        right: -12px
+                        padding: 5px 7px
+                        font-size: 12px
+            .img__grid
+                .img
+                    cursor: pointer
+                    width: 48.9%
+            .logo
+                background-image: url("../img/footer_logo.png")
+                display: inline-block
+                width: 129px
+                height: 32px
+                margin-bottom: 10px
+
+    .footer__copy
+        width: 100%
+        background-color: #283645
+        color: #707e8c
+        height: 50px
+        line-height: 50px
+        font-size: 12px
+        @include mobile
+            height: 100%
+            line-height: 1
+            overflow: auto
+        .copy__wrap
+            @extend %in
+        .copyright
+            display: inline-block
+            font-size: 10px
+            @include mobile
+                line-height: 25px
+        .nav__list
+            display: inline-block
+            float: right
+            width: 70%
+            text-align: right
+            @include mobile
+                line-height: 25px
+            li
+                display: inline-block
+                position: relative
+                margin-left: 4%
+                &:not(:last-child):after
+                    content: '.'
+                    position: absolute
+                    top: -3px
+                    right: -9px
+                a
+                    color: #707e8c
+                    text-decoration: none
+                    &:hover
+                        color: #00bc9c

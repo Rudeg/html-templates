@@ -1,0 +1,95 @@
+.work
+    height: 900px
+    background-color: #f2f5f7
+    .work__wrap
+        @extend %in
+        @extend %vertical-align
+        text-align: center
+        max-width: 1200px
+        .title
+            margin-bottom: 20px
+        .w__info
+            color: #73879c
+            margin-bottom: 40px
+
+        .w__big_items, .w__small_items
+            @extend %justify-align
+
+        .w__big_items
+            .item
+                display: inline-block
+                width: 48%
+                text-align: center
+                position: relative
+                &:hover
+                    background-color: #09b69b
+                    &:after
+                        content: '+'
+                        color: #fff
+                        position: absolute
+                        font-size: 22px
+                        top: calc(50% - 60px)
+                    .w__big
+                        opacity: .2
+                .w__big
+                    width: 100%
+                    cursor: pointer
+                .item__content
+                    border: 1px solid #e6e9ed
+                    border-bottom: 2px solid #e6e9ed
+                    border-top: 0
+                    border-radius: 1px
+                    background-color: #fff
+                    margin-top: -3px
+                    .title
+                        font:
+                            size: 14px
+                            weight: bold
+                        padding: 15px 0 10px
+                        margin-bottom: 0
+                    .author
+                        font:
+                            size: 12px
+                        color: #73879c
+                        padding-bottom: 15px
+        .w__small_items
+            .item__s
+                display: inline-block
+                width: 21.7%
+                cursor: pointer
+                position: relative
+                @include sup-mobile
+                    width: 48%
+                &:hover
+                    background-color: #09b69b
+                    .content
+                        display: inline-block
+                        position: absolute
+                        top: 50%
+                        transform: translate(0,-50%)
+                    .img
+                        opacity: .2
+                .content
+                    display: none
+                    width: 100%
+                    color: #fff
+                    text-align: center
+                    .s_title
+                        font-size: 11px
+                        padding-bottom: 10px
+                    .author
+                        font-size: 10px
+                .img
+                    width: 100%
+        .w__pager
+            width: 60px
+            margin: 0 auto
+            .page
+                display: inline-block
+                width: 10px
+                height: 10px
+                background-color: #506a85
+                border-radius: 50%
+                cursor: pointer
+                &:hover
+                    background-color: #00bc9c
