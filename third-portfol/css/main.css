@@ -1,0 +1,638 @@
+/* line 8, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* line 13, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_reset */
+body, html {
+  height: 100%; }
+
+/* line 15, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_reset */
+img, fieldset, a img {
+  border: none; }
+
+/* line 18, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_reset */
+input[type="submit"], button {
+  cursor: pointer; }
+  /* line 20, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_reset */
+  input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner {
+    padding: 0;
+    border: 0; }
+
+/* line 23, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_reset */
+textarea {
+  overflow: auto; }
+
+/* line 25, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_reset */
+input, button {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/* line 30, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_reset */
+input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus {
+  outline: none; }
+
+/* line 32, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_reset */
+ul, ol {
+  list-style-type: none; }
+
+/* line 34, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_reset */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%; }
+
+/* line 12, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_mixins */
+header .nav__wrap .nav__menu, header .nav__wrap .nav_socials, .about .img__list, .services .service__item {
+  text-align: justify; }
+  /* line 14, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_mixins */
+  header .nav__wrap .nav__menu:after, header .nav__wrap .nav_socials:after, .about .img__list:after, .services .service__item:after {
+    content: "";
+    width: 100%;
+    display: inline-block; }
+
+/* line 18, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_mixins */
+header, .about, .works .work__item {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center; }
+
+/* line 5, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_layout */
+header .nav__wrap, .about .content, .contact .contact__wrap {
+  width: 76%;
+  margin: 0 auto; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    header .nav__wrap, .about .content, .contact .contact__wrap {
+      width: 87%; } }
+  @media (max-width: 767px) {
+    header .nav__wrap, .about .content, .contact .contact__wrap {
+      width: 90%; } }
+
+/* line 13, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_layout */
+body {
+  width: 100%;
+  font-family: sans-serif; }
+
+/* line 1, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_common */
+a {
+  text-decoration: none; }
+
+/* line 4, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_common */
+.btn {
+  position: relative;
+  padding: 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff; }
+  /* line 13, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_common */
+  .btn:hover {
+    background: rgba(255, 255, 255, 0.4); }
+    /* line 15, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_common */
+    .btn:hover:after, .btn:hover:before {
+      background: rgba(255, 255, 255, 0.4); }
+  /* line 17, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_common */
+  .btn:after, .btn:before {
+    content: '';
+    background: rgba(255, 255, 255, 0.15);
+    display: inline-block;
+    width: 36px;
+    position: absolute;
+    height: 100%;
+    top: -1px;
+    border: 1px solid;
+    border-left: none;
+    border-bottom-right-radius: 100%;
+    border-top-right-radius: 100%; }
+  /* line 29, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_common */
+  .btn:before {
+    border: 1px solid;
+    border-right: none;
+    border-bottom-left-radius: 100%;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    transform: translateX(-100%); }
+
+/* line 1, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+header {
+  height: 849px;
+  background-image: url(../img/header_bg.jpg);
+  color: #fff;
+  text-align: center; }
+  /* line 7, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+  header .logo {
+    display: block;
+    width: 55px;
+    height: 60px;
+    background-image: url(../img/logo.png);
+    background-size: 100% 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 14%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  /* line 15, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+  header .welcome__title {
+    position: relative;
+    top: 30%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 100; }
+    @media (max-width: 767px) {
+      header .welcome__title {
+        position: relative;
+        top: 25%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); } }
+  /* line 23, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+  header .welcome__text {
+    position: relative;
+    top: 35%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 54px;
+    font-weight: 100; }
+  /* line 28, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+  header .bottom__arrow {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
+    background: url(../img/btn_down.png) center center no-repeat;
+    background-color: transparent;
+    width: 97px;
+    height: 108px;
+    margin: 0 auto; }
+    @media (max-width: 767px) {
+      header .bottom__arrow {
+        position: relative;
+        top: 42%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); } }
+    /* line 38, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+    header .bottom__arrow:after {
+      content: '';
+      display: inline-block;
+      background: url(../img/down_btn_bg.png);
+      width: 97px;
+      height: 108px; }
+  /* line 45, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+  header .nav__wrap {
+    position: relative;
+    top: 65%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: left; }
+    @media (max-width: 767px) {
+      header .nav__wrap {
+        position: relative;
+        top: 53%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); } }
+    @media (max-width: 500px) {
+      header .nav__wrap {
+        position: relative;
+        top: 45%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); } }
+    /* line 54, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+    header .nav__wrap .nav__menu, header .nav__wrap .nav_socials {
+      display: inline-block;
+      vertical-align: text-top; }
+      /* line 58, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+      header .nav__wrap .nav__menu li, header .nav__wrap .nav_socials li {
+        display: inline-block; }
+        /* line 60, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+        header .nav__wrap .nav__menu li a, header .nav__wrap .nav_socials li a {
+          color: #fff;
+          text-decoration: none; }
+    /* line 63, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+    header .nav__wrap .nav__menu {
+      width: 60%;
+      margin-left: 3%; }
+    /* line 66, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+    header .nav__wrap .nav_socials {
+      vertical-align: top;
+      float: right;
+      line-height: 32px;
+      text-align: center; }
+      /* line 71, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+      header .nav__wrap .nav_socials li {
+        cursor: pointer;
+        position: relative;
+        width: 36px;
+        height: 16px;
+        position: relative; }
+        /* line 34, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_mixins */
+        header .nav__wrap .nav_socials li:after, header .nav__wrap .nav_socials li:before {
+          cursor: pointer;
+          top: -13px;
+          content: '';
+          position: absolute;
+          width: 26px;
+          height: 26px;
+          background-color: #3c70b6;
+          transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          left: 5px;
+          border-radius: 2px; }
+        /* line 47, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_mixins */
+        header .nav__wrap .nav_socials li:after {
+          top: 3px;
+          transform: rotate(-135deg);
+          -ms-transform: rotate(-135deg);
+          -webkit-transform: rotate(-135deg); }
+        /* line 77, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+        header .nav__wrap .nav_socials li a {
+          position: absolute;
+          z-index: 1; }
+      /* line 81, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+      header .nav__wrap .nav_socials .item__fb {
+        background-color: #3c70b6; }
+        /* line 83, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+        header .nav__wrap .nav_socials .item__fb a {
+          background-image: url(../img/icon_fb.png);
+          width: 12px;
+          height: 23px;
+          left: 40%;
+          top: -2px; }
+      /* line 89, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+      header .nav__wrap .nav_socials .item__tw {
+        background-color: #47afce; }
+        /* line 54, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_mixins */
+        header .nav__wrap .nav_socials .item__tw:before, header .nav__wrap .nav_socials .item__tw:after {
+          background-color: #47afce; }
+        /* line 92, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+        header .nav__wrap .nav_socials .item__tw a {
+          background-image: url(../img/icon_tw.png);
+          width: 22px;
+          height: 16px;
+          left: 20%; }
+      /* line 97, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+      header .nav__wrap .nav_socials .item__pi {
+        background-color: #ea4c89; }
+        /* line 54, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_mixins */
+        header .nav__wrap .nav_socials .item__pi:before, header .nav__wrap .nav_socials .item__pi:after {
+          background-color: #ea4c89; }
+        /* line 100, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+        header .nav__wrap .nav_socials .item__pi a {
+          background-image: url(../img/icon_pi.png);
+          width: 18px;
+          height: 18px;
+          left: 9px;
+          top: -1px; }
+      /* line 106, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+      header .nav__wrap .nav_socials .item__yb {
+        background-color: #ba1111; }
+        /* line 54, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_mixins */
+        header .nav__wrap .nav_socials .item__yb:before, header .nav__wrap .nav_socials .item__yb:after {
+          background-color: #ba1111; }
+        /* line 109, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+        header .nav__wrap .nav_socials .item__yb a {
+          background-image: url(../img/icon_yt.png);
+          width: 19px;
+          height: 24px;
+          left: 9px;
+          top: -4px; }
+    /* line 115, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_header */
+    header .nav__wrap .logo {
+      display: inline-block;
+      position: static;
+      transform: none;
+      vertical-align: middle;
+      width: 34px;
+      height: 38px; }
+
+/* line 1, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_about */
+.about {
+  height: 680px;
+  background-image: url(../img/about_bg.jpg);
+  color: #fff; }
+  /* line 6, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_about */
+  .about .title {
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+    opacity: 0.6;
+    letter-spacing: 0.2em; }
+  /* line 12, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_about */
+  .about .content {
+    height: 520px;
+    background-color: #272727;
+    border-radius: 2px; }
+  /* line 17, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_about */
+  .about .img__list {
+    width: 325px;
+    margin: 0 auto;
+    padding: 100px 0 30px; }
+  /* line 22, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_about */
+  .about .who__title {
+    font-size: 30px;
+    font-weight: 100;
+    color: #e22e2e;
+    padding-bottom: 20px; }
+  /* line 28, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_about */
+  .about .who__info {
+    font-size: 18px;
+    font-weight: 100;
+    color: #8c8c8c;
+    text-transform: uppercase;
+    padding-bottom: 20px; }
+  /* line 35, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_about */
+  .about .who__text {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 14px; }
+    @media (max-width: 767px) {
+      .about .who__text {
+        width: 90%; } }
+
+/* line 1, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+.services {
+  height: 1750px;
+  background-color: #272727;
+  color: #fff;
+  text-align: center; }
+  @media (max-width: 767px) {
+    .services {
+      height: 1400px; } }
+  /* line 8, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+  .services .title {
+    color: #e22e2e;
+    padding: 150px 0;
+    background: url(../img/services_title_bg.png) center center no-repeat;
+    font-size: 40px;
+    font-weight: 100; }
+    @media (max-width: 767px) {
+      .services .title {
+        padding: 80px; } }
+  /* line 17, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+  .services .service__item {
+    width: 61%;
+    margin: 0 auto;
+    padding-bottom: 150px; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .services .service__item {
+        width: 80%;
+        padding-bottom: 120px; } }
+    @media (max-width: 767px) {
+      .services .service__item {
+        width: 85%;
+        padding-bottom: 50px;
+        text-align: center; } }
+    /* line 30, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+    .services .service__item:nth-of-type(even) .info {
+      float: right;
+      text-align: left; }
+      @media (max-width: 767px) {
+        .services .service__item:nth-of-type(even) .info {
+          float: none;
+          text-align: center; } }
+    /* line 36, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+    .services .service__item .title {
+      background: none;
+      padding: 0 0 20px;
+      font-size: 28px; }
+    /* line 40, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+    .services .service__item .tags {
+      padding-bottom: 20px;
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #727272; }
+    /* line 47, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+    .services .service__item .text {
+      font-weight: 200; }
+    /* line 49, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+    .services .service__item .info, .services .service__item .img__list {
+      display: inline-block;
+      width: 38%; }
+      @media (max-width: 767px) {
+        .services .service__item .info, .services .service__item .img__list {
+          width: 80%; } }
+    /* line 54, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+    .services .service__item .info {
+      text-align: right; }
+      @media (max-width: 767px) {
+        .services .service__item .info {
+          text-align: center;
+          float: none; } }
+    /* line 59, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+    .services .service__item .img__list {
+      position: relative;
+      max-width: 265px; }
+      /* line 62, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+      .services .service__item .img__list img {
+        position: relative; }
+        @media (max-width: 767px) {
+          .services .service__item .img__list img {
+            padding-top: 20px;
+            width: 20%;
+            height: 20%;
+            position: static; } }
+      /* line 69, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+      .services .service__item .img__list .img__3 {
+        left: 75px;
+        bottom: 20px; }
+      /* line 72, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_services */
+      .services .service__item .img__list .img__4 {
+        right: 115px;
+        bottom: -50px; }
+
+/* line 1, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_works */
+.works {
+  height: 760px; }
+  /* line 3, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_works */
+  .works .work__item {
+    width: 25%;
+    height: 100%;
+    float: left;
+    display: inline-block;
+    position: relative;
+    text-align: center; }
+    @media (max-width: 767px) {
+      .works .work__item {
+        width: 50%;
+        height: 50%; } }
+  /* line 14, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_works */
+  .works .work__1 {
+    background-image: url(../img/work_1_bg.jpg); }
+  /* line 16, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_works */
+  .works .work__2 {
+    background-image: url(../img/work_2_bg.jpg); }
+  /* line 18, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_works */
+  .works .work__3 {
+    background-image: url(../img/work_3_bg.jpg); }
+  /* line 20, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_works */
+  .works .work__4 {
+    background-image: url(../img/work_4_bg.jpg); }
+  /* line 22, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_works */
+  .works .geo__link {
+    margin-top: 70px;
+    background-image: url(../img/cat_icon.png);
+    width: 62px;
+    height: 70px;
+    display: inline-block;
+    background-color: transparent; }
+  /* line 29, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_works */
+  .works .work__info {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff; }
+    /* line 35, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_works */
+    .works .work__info .title {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em; }
+      /* line 39, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_works */
+      .works .work__info .title:after {
+        content: '';
+        width: 25%;
+        margin: 0 auto;
+        display: block;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 15px;
+        opacity: 0.4; }
+    /* line 47, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_works */
+    .works .work__info .tags {
+      padding: 15px 0;
+      font-size: 14px;
+      opacity: 0.5; }
+
+/* line 1, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+.contact {
+  min-height: 690px;
+  background-color: #e1e1e1;
+  text-align: center; }
+  /* line 7, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+  .contact .title {
+    color: #e22e2e;
+    padding: 120px 0;
+    background: url(../img/contact_title_bg.png) center center no-repeat;
+    font-size: 40px;
+    font-weight: 100; }
+  /* line 14, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+  .contact .contact__form {
+    display: inline-block;
+    width: 40%;
+    float: left;
+    text-align: left; }
+    @media (max-width: 767px) {
+      .contact .contact__form {
+        width: 80%;
+        float: none;
+        margin-bottom: 20px; } }
+    /* line 23, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+    .contact .contact__form .contact__title {
+      color: #a7a7a7;
+      font-weight: 100;
+      letter-spacing: 0.2em; }
+    /* line 27, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+    .contact .contact__form .input {
+      display: block;
+      margin: 15px 0;
+      padding: 8px 0;
+      width: 80%;
+      color: #222;
+      background-color: #e1e1e1;
+      border-bottom: 2px solid #999; }
+      /* line 35, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+      .contact .contact__form .input:focus {
+        border-color: #e22e2e; }
+      @media (max-width: 767px) {
+        .contact .contact__form .input {
+          width: 100%; } }
+    /* line 39, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+    .contact .contact__form .btn {
+      margin: 10px 0 0 35px;
+      border-width: 2px;
+      border-color: #999;
+      color: #999; }
+      /* line 44, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+      .contact .contact__form .btn:before, .contact .contact__form .btn:after {
+        border-width: 2px;
+        border-color: #999;
+        top: -2px; }
+  /* line 48, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+  .contact .contact__info {
+    display: inline-block;
+    background-image: url(../img/address_bg.png);
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 320px;
+    float: right;
+    padding-top: 25px; }
+    @media (max-width: 767px) {
+      .contact .contact__info {
+        float: none; } }
+    /* line 58, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+    .contact .contact__info .link {
+      display: block;
+      position: relative;
+      margin: 60px 0;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.05em; }
+      /* line 66, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+      .contact .contact__info .link:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        display: inline-block;
+        bottom: 25px; }
+    /* line 72, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+    .contact .contact__info .address:before {
+      background-image: url(../img/icon_place.png);
+      height: 32px;
+      width: 25px;
+      transform: translate(-70%, 0); }
+    /* line 77, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+    .contact .contact__info .email:before {
+      background-image: url(../img/icon_email.png);
+      width: 32px;
+      height: 21px;
+      transform: translate(-64%, 0); }
+    /* line 82, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/contact */
+    .contact .contact__info .phone:before {
+      background-image: url(../img/icon_phone.png);
+      width: 22px;
+      height: 33px;
+      transform: translate(-70%, 0); }
+
+/* line 1, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_footer */
+footer {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #e22e2e;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.15em; }
+  /* line 10, /Users/sergiirudenko/Projects/html-makeups/third-portfol/sass/_footer */
+  footer .author {
+    color: #222; }

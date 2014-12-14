@@ -1,0 +1,121 @@
+header
+    @extend %cover-bg
+    height: 849px
+    background-image: url(../img/header_bg.jpg)
+    color: #fff
+    text-align: center
+    .logo
+        display: block
+        width: 55px
+        height: 60px
+        background-image: url(../img/logo.png)
+        background-size: 100% 100%
+        margin: 0 auto
+        +vertical-align(14%)
+    .welcome__title
+        +vertical-align(30%)
+        text-transform: uppercase
+        font:
+            size: 24px
+            weight: 100
+        @include mobile
+            +vertical-align(25%)
+    .welcome__text
+        +vertical-align(35%)
+        font:
+            size: 54px
+            weight: 100
+    .bottom__arrow
+        +vertical-align(50%)
+        display: block
+        background: url(../img/btn_down.png) center center no-repeat
+        background-color: transparent
+        width: 97px
+        height: 108px
+        margin: 0 auto
+        @include mobile
+            +vertical-align(42%)
+        &:after
+            content: ''
+            display: inline-block
+            background: url(../img/down_btn_bg.png)
+            width: 97px
+            height: 108px
+
+    .nav__wrap
+        @extend %in
+        +vertical-align(65%)
+        text-align: left
+        @include mobile
+            +vertical-align(53%)
+        @include sup-mobile
+            +vertical-align(45%)
+
+        .nav__menu, .nav_socials
+            display: inline-block
+            @extend %justify-align
+            vertical-align: text-top
+            li
+                display: inline-block
+                a
+                    color: #fff
+                    text-decoration: none
+        .nav__menu
+            width: 60%
+            margin-left: 3%
+        .nav_socials
+            vertical-align: top
+            float: right
+            line-height: 32px
+            text-align: center
+            li
+                cursor: pointer
+                +hexagon-s(-13px, 3px, 26px, 5px, #3c70b6)
+                width: 36px
+                height: 16px
+                position: relative
+                a
+                    position: absolute
+                    z-index: 1
+
+            .item__fb
+                background-color: #3c70b6
+                a
+                    background-image: url(../img/icon_fb.png)
+                    width: 12px
+                    height: 23px
+                    left: 40%
+                    top: -2px
+            .item__tw
+                background-color: #47afce
+                +hexagon-color-s(#47afce)
+                a
+                    background-image: url(../img/icon_tw.png)
+                    width: 22px
+                    height: 16px
+                    left: 20%
+            .item__pi
+                background-color: #ea4c89
+                +hexagon-color-s(#ea4c89)
+                a
+                    background-image: url(../img/icon_pi.png)
+                    width: 18px
+                    height: 18px
+                    left: 9px
+                    top: -1px
+            .item__yb
+                background-color: #ba1111
+                +hexagon-color-s(#ba1111)
+                a
+                    background-image: url(../img/icon_yt.png)
+                    width: 19px
+                    height: 24px
+                    left: 9px
+                    top: -4px
+        .logo
+            display: inline-block
+            position: static
+            transform: none
+            vertical-align: middle
+            width: 34px
+            height: 38px

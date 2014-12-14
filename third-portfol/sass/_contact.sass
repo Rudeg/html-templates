@@ -1,0 +1,86 @@
+.contact
+    min-height: 690px
+    background-color: #e1e1e1
+    text-align: center
+    .contact__wrap
+        @extend %in
+    .title
+        color: #e22e2e
+        padding: 120px 0
+        background: url(../img/contact_title_bg.png) center center no-repeat
+        font:
+            size: 40px
+            weight: 100
+    .contact__form
+        display: inline-block
+        width: 40%
+        float: left
+        text-align: left
+        @include mobile
+            width: 80%
+            float: none
+            margin-bottom: 20px
+        .contact__title
+            color: #a7a7a7
+            font-weight: 100
+            letter-spacing: .2em
+        .input
+            display: block
+            margin: 15px 0
+            padding: 8px 0
+            width: 80%
+            color: #222
+            background-color: #e1e1e1
+            border-bottom: 2px solid #999
+            &:focus
+                border-color: #e22e2e
+            @include mobile
+                width: 100%
+        .btn
+            margin: 10px 0 0 35px
+            border-width: 2px
+            border-color: #999
+            color: #999
+            &:before, &:after
+                border-width: 2px
+                border-color: #999
+                top: -2px
+    .contact__info
+        display: inline-block
+        background-image: url(../img/address_bg.png)
+        background-repeat: no-repeat
+        width: 280px
+        height: 320px
+        float: right
+        padding-top: 25px
+        @include mobile
+            float: none
+        .link
+            display: block
+            position: relative
+            margin: 60px 0
+            color: #fff
+            text-transform: uppercase
+            font-size: 12px
+            letter-spacing: .05em
+            &:before
+                content: ''
+                position: absolute
+                left: 50%
+                display: inline-block
+                bottom: 25px
+        .address:before
+            background-image: url(../img/icon_place.png)
+            height: 32px
+            width: 25px
+            transform: translate(-70%, 0)
+        .email:before
+            background-image: url(../img/icon_email.png)
+            width: 32px
+            height: 21px
+            transform: translate(-64%, 0)
+        .phone:before
+            background-image: url(../img/icon_phone.png)
+            width: 22px
+            height: 33px
+            transform: translate(-70%, 0)
