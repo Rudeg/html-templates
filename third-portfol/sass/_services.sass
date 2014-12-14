@@ -1,0 +1,74 @@
+.services
+    height: 1750px
+    background-color: #272727
+    color: #fff
+    text-align: center
+    @include mobile
+        height: 1400px
+    .title
+        color: #e22e2e
+        padding: 150px 0
+        background: url(../img/services_title_bg.png) center center no-repeat
+        font:
+            size: 40px
+            weight: 100
+        @include mobile
+            padding: 80px
+    .service__item
+        @extend %justify-align
+        width: 61%
+        margin: 0 auto
+        padding-bottom: 150px
+        @include tablet
+            width: 80%
+            padding-bottom: 120px
+        @include mobile
+            width: 85%
+            padding-bottom: 50px
+            text-align: center
+        &:nth-of-type(even)
+            .info
+                float: right
+                text-align: left
+                @include mobile
+                    float: none
+                    text-align: center
+        .title
+            background: none
+            padding: 0 0 20px
+            font-size: 28px
+        .tags
+            padding-bottom: 20px
+            font:
+                size: 16px
+                weight: 400
+            text-transform: uppercase
+            color: #727272
+        .text
+            font-weight: 200
+        .info, .img__list
+            display: inline-block
+            width: 38%
+            @include mobile
+                width: 80%
+        .info
+            text-align: right
+            @include mobile
+                text-align: center
+                float: none
+        .img__list
+            position: relative
+            max-width: 265px
+            img
+                position: relative
+                @include mobile
+                    padding-top: 20px
+                    width: 20%
+                    height: 20%
+                    position: static
+            .img__3
+                left: 75px
+                bottom: 20px
+            .img__4
+                right: 115px
+                bottom: -50px

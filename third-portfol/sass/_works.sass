@@ -1,0 +1,50 @@
+.works
+    height: 760px
+    .work__item
+        @extend %cover-bg
+        width: 25%
+        height: 100%
+        float: left
+        display: inline-block
+        position: relative
+        text-align: center
+        @include mobile
+            width: 50%
+            height: 50%
+    .work__1
+        background-image: url(../img/work_1_bg.jpg)
+    .work__2
+        background-image: url(../img/work_2_bg.jpg)
+    .work__3
+        background-image: url(../img/work_3_bg.jpg)
+    .work__4
+        background-image: url(../img/work_4_bg.jpg)
+    .geo__link
+        margin-top: 70px
+        background-image: url(../img/cat_icon.png)
+        width: 62px
+        height: 70px
+        display: inline-block
+        background-color: transparent
+    .work__info
+        position: absolute
+        bottom: 10%
+        width: 100%
+        margin: 0 auto
+        color: #fff
+        .title
+            font-size: 16px
+            text-transform: uppercase
+            letter-spacing: .2em
+            &:after
+                content: ''
+                width: 25%
+                margin: 0 auto
+                display: block
+                border-bottom: 1px solid #fff
+                padding-bottom: 15px
+                opacity: .4
+        .tags
+            padding: 15px 0
+            font-size: 14px
+            opacity: .5

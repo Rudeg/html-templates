@@ -1,0 +1,98 @@
+$desktop-width: 1024px
+$tablet-width: 768px
+$sup-mobile: 500px
+
+%vertical-align
+    position: relative
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
+
+%justify-align
+    text-align: justify
+    &:after
+        content: ""
+        width: 100%
+        display: inline-block
+%cover-bg
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    text-align: center
+
+=vertical-align($val)
+    position: relative
+    top: $val
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
+
+=hexagon-s($top, $bottom, $size, $left, $color)
+    position: relative
+    &:after, &:before
+        cursor: pointer
+        top: $top
+        content: ''
+        position: absolute
+        width: $size
+        height: $size
+        background-color: $color
+        transform: rotate(45deg)
+        -ms-transform: rotate(45deg)
+        -webkit-transform: rotate(45deg)
+        left: $left
+        border-radius: 2px
+    &:after
+        top: $bottom
+        transform: rotate(-135deg)
+        -ms-transform: rotate(-135deg)
+        -webkit-transform: rotate(-135deg)
+
+=hexagon-color-s($color)
+    &:before, &:after
+        background-color: $color
+
+=hexagon($top, $left, $color)
+    position: relative
+    &:before
+        content: ""
+        position: absolute
+        top: -$top
+        left: 0
+        width: 0
+        height: 0
+        border-left: $left solid transparent
+        border-right: $left solid transparent
+        border-bottom: $top solid $color
+    &:after
+        content: ""
+        position: absolute
+        bottom: -$top
+        left: 0
+        width: 0
+        height: 0
+        border-left: $left solid transparent
+        border-right: $left solid transparent
+        border-top: $top solid $color
+
+=hexagon-color($color)
+    &:before
+        border-bottom-color: $color
+    &:after
+        border-top-color: $color
+
+
+
+=tablet
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+        @content
+
+=mobile
+    @media (max-width: #{$tablet-width - 1px})
+        @content
+
+=sup-mobile
+    @media (max-width: #{$sup-mobile})
+        @content

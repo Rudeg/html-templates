@@ -1,0 +1,40 @@
+.about
+    @extend %cover-bg
+    height: 680px
+    background-image: url(../img/about_bg.jpg)
+    color: #fff
+    .title
+        height: 80px
+        line-height: 80px
+        font-size: 24px
+        opacity: .6
+        letter-spacing: .2em
+    .content
+        @extend %in
+        height: 520px
+        background-color: #272727
+        border-radius: 2px
+    .img__list
+        @extend %justify-align
+        width: 325px
+        margin: 0 auto
+        padding: 100px 0 30px
+    .who__title
+        font:
+            size: 30px
+            weight: 100
+        color: #e22e2e
+        padding-bottom: 20px
+    .who__info
+        font:
+            size: 18px
+            weight: 100
+        color: #8c8c8c
+        text-transform: uppercase
+        padding-bottom: 20px
+    .who__text
+        width: 50%
+        margin: 0 auto
+        font-size: 14px
+        @include mobile
+            width: 90%

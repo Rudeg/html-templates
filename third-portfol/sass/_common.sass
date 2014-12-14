@@ -1,0 +1,43 @@
+a
+    text-decoration: none
+
+.btn
+    position: relative
+    padding: 15px 0
+    text-transform: uppercase
+    letter-spacing: .2em
+    color: #fff
+    background: rgba(255, 255, 255, 0.15)
+    border-top: 1px solid #fff
+    border-bottom: 1px solid #fff
+    &:hover
+        background: rgba(255, 255, 255, 0.40)
+        &:after, &:before
+            background: rgba(255, 255, 255, 0.40)
+    &:after, &:before
+        content: ''
+        background: rgba(255, 255, 255, 0.15)
+        display: inline-block
+        width: 36px
+        position: absolute
+        height: 100%
+        top: -1px
+        border: 1px solid
+        border-left: none
+        border-bottom-right-radius: 100%
+        border-top-right-radius: 100%
+    &:before
+        border: 1px solid
+        border-right: none
+        border-bottom-left-radius: 100%
+        border-top-left-radius: 100%
+        border-bottom-right-radius: 0
+        border-top-right-radius: 0
+        transform: translateX(-100%)
+
+%clearfix
+    &:after
+        content: ""
+        display: table
+        clear: both
+
