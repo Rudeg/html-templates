@@ -1,3 +1,5 @@
+$work-class: work !default
+
 .works
     height: 760px
     .work__item
@@ -11,14 +13,13 @@
         @include mobile
             width: 50%
             height: 50%
-    .work__1
-        background-image: url(../img/work_1_bg.jpg)
-    .work__2
-        background-image: url(../img/work_2_bg.jpg)
-    .work__3
-        background-image: url(../img/work_3_bg.jpg)
-    .work__4
-        background-image: url(../img/work_4_bg.jpg)
+        @include sup-mobile
+            width: 100%
+
+    @for $i from 1 through 4
+        .#{$work-class}__#{$i}
+            background-image: url(../img/work_#{$i}_bg.jpg)
+
     .geo__link
         margin-top: 70px
         background-image: url(../img/cat_icon.png)

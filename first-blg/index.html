@@ -2,7 +2,8 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>First template</title>
   <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
@@ -21,9 +22,9 @@
     <div class="post__header">
       <div class="post__date">31 Jul</div>
       <div class="post__info">
-        <div class="post__category">cat: <a class="link category__link" href="#">Diary, Personal</a></div>
-        <div class="post__likes">136 Likes</div>
-        <div class="post__comments"><i></i>21 Comments</div>
+        <div class="info_item post__category">cat: <a class="link category__link" href="#">Diary, Personal</a></div>
+        <div class="info_item post__likes">136 Likes</div>
+        <div class="info_item post__comments"><i></i>21 Comments</div>
       </div>
     </div>
 
@@ -64,22 +65,24 @@
 
   <section class="comment__form">
     <h5 class="form__title">Post A Comment</h5>
-    <div class="form__row">
-      <label class="col1 label label__left" for="name">Use Your Real Name</label>
-      <div class="input__wrap col2">
+    <div class="row">
+      <div class="control-field">
+        <label class="label" for="name">Use Your Real Name</label>
         <input class="input" type="text" name="name" id="name" placeholder="Name"/>
+      </div>
+      <div class="control-field">
+        <label class="label" for="email">Email Will not published</label>
         <input class="input" type="email" name="email" id="email" placeholder="Email"/>
       </div>
-      <label class="col1 label label__right" for="email">Email Will not published</label>
     </div>
-    <div class="form__row">
-      <label class="col1 label textarea__label label__left" for="comments">Write a good comment</label>
-      <div class="textarea__wrap col2">
-        <textarea class="textarea comments__ta" name="Comments" id="comments"></textarea>
+    <div class="row">
+      <div class="control-field">
+        <label class="label textarea__label" for="comments">Write a good comment</label>
+        <textarea class="textarea" name="Comments" id="comments"></textarea>
       </div>
     </div>
     <div class="form__row">
-      <button type="button" class="btn post__btn col2">Post</button>
+      <button type="button" class="btn post__btn">Post</button>
     </div>
   </section>
 

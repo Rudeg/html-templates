@@ -2,11 +2,11 @@
     border-bottom: 1px solid #dfdfdf
     width: 100%
     .header__bg
-        background: url(../img/header__bg.jpg) no-repeat center center fixed
-        -webkit-background-size: cover
-        -moz-background-size: cover
-        -o-background-size: cover
-        background-size: cover
+        background-image: url(../img/header__bg.jpg)
+        background-repeat: no-repeat
+        background-position: center
+        background-attachment: fixed
+        @extend %cover-bg
         height: 349px
     .header__menu
         width: 90%
@@ -17,17 +17,18 @@
         text-align: center
         @include mobile
             line-height: 1.5
+            height: auto
         .menu__item
             display: inline-block
             width: 17%
             @include mobile
-                width: 49%
+                width: 100%
             &.active .item__link
                 color: $main
             .item__link
                 text-decoration: none
                 cursor: pointer
-                color: #c5c5c5
+                color: $link-color
                 font:
                     size: 24px
                     weight: bold
@@ -50,11 +51,12 @@
             cursor: pointer
             &+.menu__item
                 margin-left: 8%
+                @include mobile
+                    margin-left: 0
             @include tablet
-                display: none
-                &+.menu__item
-                    margin-left: 0
+                transform: translate(-40%, -90%)
             @include mobile
-                display: none
-                &+.menu__item
-                    margin-left: 0
+                @extend %cover-bg
+                transform: translate(0%, -100%)
+                width: 80px
+                height: 80px

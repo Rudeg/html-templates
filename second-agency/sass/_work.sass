@@ -12,6 +12,10 @@
             color: #73879c
             margin-bottom: 40px
 
+        @include mobile
+            .title, .w__info
+                margin-bottom: 10px
+
         .w__big_items, .w__small_items
             @extend %justify-align
 
@@ -21,6 +25,8 @@
                 width: 48%
                 text-align: center
                 position: relative
+                @include sup-mobile
+                    width: 100%
                 &:hover
                     background-color: #09b69b
                     &:after
@@ -93,3 +99,5 @@
                 cursor: pointer
                 &:hover
                     background-color: #00bc9c
+    @include mobile
+        height: 1000px

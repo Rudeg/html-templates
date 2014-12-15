@@ -45,15 +45,33 @@ table {
   border-collapse: collapse;
   width: 100%; }
 
-/* line 7, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
+/* line 30, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_mixins */
+.post, .comment__form, .comments, .footer {
+  width: 75%;
+  margin: 0 auto; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .post, .comment__form, .comments, .footer {
+      width: 87%; } }
+  @media (max-width: 767px) {
+    .post, .comment__form, .comments, .footer {
+      width: 90%; } }
+
+/* line 38, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_mixins */
+.header .header__bg, .header .header__menu .menu__avatar {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+/* line 1, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
 .link {
   text-decoration: none;
   color: #3eb3a5; }
-  /* line 10, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
+  /* line 4, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
   .link:hover {
     color: #079281; }
 
-/* line 13, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
+/* line 7, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
 .btn {
   color: #fff;
   background-color: #3eb3a5;
@@ -61,11 +79,11 @@ table {
   border-radius: 3px;
   font-size: 18px;
   font-weight: bold; }
-  /* line 21, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
+  /* line 15, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
   .btn:hover {
     background-color: #079281; }
 
-/* line 24, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
+/* line 18, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
 .label {
   display: inline-block;
   color: #8e8e8e;
@@ -73,33 +91,22 @@ table {
   font-size: 12px;
   font-weight: bold; }
 
-/* line 32, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
+/* line 26, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
 .input, .textarea {
   padding: 15px;
   border: none;
   border-radius: 3px;
-  color: #888b8b;
+  color: #8e8e8e;
   background-color: #ebebeb; }
 
-/* line 39, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
+/* line 33, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_common */
 .textarea {
   resize: none; }
 
-/* line 5, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_layout */
-.footer, .post, .comment__form, .comments {
-  width: 75%;
-  margin: 0 auto; }
-
-/* line 9, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_layout */
+/* line 1, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_layout */
 body {
   width: 100%;
   font-family: sans-serif; }
-
-/* line 14, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_layout */
-.footer {
-  text-align: center;
-  margin: 40px auto 40px auto;
-  color: #c6c6c6; }
 
 /* line 1, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
 .header {
@@ -107,11 +114,10 @@ body {
   width: 100%; }
   /* line 4, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
   .header .header__bg {
-    background: url(../img/header__bg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-image: url(../img/header__bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     height: 349px; }
   /* line 11, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
   .header .header__menu {
@@ -123,28 +129,29 @@ body {
     text-align: center; }
     @media (max-width: 767px) {
       .header .header__menu {
-        line-height: 1.5; } }
-    /* line 20, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
+        line-height: 1.5;
+        height: auto; } }
+    /* line 21, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
     .header .header__menu .menu__item {
       display: inline-block;
       width: 17%; }
       @media (max-width: 767px) {
         .header .header__menu .menu__item {
-          width: 49%; } }
-      /* line 25, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
+          width: 100%; } }
+      /* line 26, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
       .header .header__menu .menu__item.active .item__link {
         color: #3eb3a5; }
-      /* line 27, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
+      /* line 28, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
       .header .header__menu .menu__item .item__link {
         text-decoration: none;
         cursor: pointer;
         color: #c5c5c5;
         font-size: 24px;
         font-weight: bold; }
-        /* line 34, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
+        /* line 35, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
         .header .header__menu .menu__item .item__link:hover {
           color: #3eb3a5; }
-      /* line 36, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
+      /* line 37, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
       .header .header__menu .menu__item:nth-of-type(2) {
         margin-right: 8%; }
         @media (min-width: 768px) and (max-width: 1023px) {
@@ -153,7 +160,7 @@ body {
         @media (max-width: 767px) {
           .header .header__menu .menu__item:nth-of-type(2) {
             margin-right: 0; } }
-    /* line 42, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
+    /* line 43, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
     .header .header__menu .menu__avatar {
       background-image: url("../img/main__avatar.jpg");
       width: 197px;
@@ -163,32 +170,28 @@ body {
       border: 7px solid #fff;
       border-radius: 50%;
       cursor: pointer; }
-      /* line 51, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
+      /* line 52, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
       .header .header__menu .menu__avatar + .menu__item {
         margin-left: 8%; }
+        @media (max-width: 767px) {
+          .header .header__menu .menu__avatar + .menu__item {
+            margin-left: 0; } }
       @media (min-width: 768px) and (max-width: 1023px) {
         .header .header__menu .menu__avatar {
-          display: none; }
-          /* line 55, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
-          .header .header__menu .menu__avatar + .menu__item {
-            margin-left: 0; } }
+          transform: translate(-40%, -90%); } }
       @media (max-width: 767px) {
         .header .header__menu .menu__avatar {
-          display: none; }
-          /* line 59, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_header */
-          .header .header__menu .menu__avatar + .menu__item {
-            margin-left: 0; } }
+          transform: translate(0%, -100%);
+          width: 80px;
+          height: 80px; } }
 
 /* line 1, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
 .post {
   margin-top: 60px; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .post {
-      width: 60%; } }
-  /* line 6, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+  /* line 4, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
   .post .post__header {
     position: relative; }
-    /* line 8, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+    /* line 6, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
     .post .post__header .post__date {
       position: absolute;
       transform: translate(-100%, -25%);
@@ -201,15 +204,24 @@ body {
       color: #3eb3a5;
       font-size: 30px;
       font-weight: bold; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .post .post__header .post__date {
+          right: 0;
+          transform: translate(50%);
+          font-size: 16px;
+          line-height: 50px;
+          height: 50px;
+          width: 50px; } }
       @media (max-width: 767px) {
         .post .post__header .post__date {
-          transform: translate(-100%, 6%);
           height: 43px;
           width: 43px;
+          right: 0;
           line-height: 43px;
           border: 3px solid #ebebeb;
-          font-size: 14px; } }
-    /* line 28, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+          font-size: 14px;
+          transform: none; } }
+    /* line 34, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
     .post .post__header .post__info {
       height: 32px;
       line-height: 35px;
@@ -218,28 +230,36 @@ body {
       border-bottom: 1px solid #ebebeb; }
       @media (max-width: 767px) {
         .post .post__header .post__info {
-          font-size: 10px; } }
-      /* line 37, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
-      .post .post__header .post__info .post__category, .post .post__header .post__info .post__likes, .post .post__header .post__info .post__comments {
+          font-size: 10px;
+          height: 100%; } }
+      /* line 43, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+      .post .post__header .post__info .info_item {
         display: inline-block;
         padding: 0 10px 0 0; }
-        /* line 40, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
-        .post .post__header .post__info .post__category:first-of-type, .post .post__header .post__info .post__likes:first-of-type, .post .post__header .post__info .post__comments:first-of-type {
+        /* line 46, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+        .post .post__header .post__info .info_item:first-of-type {
           padding-left: 10px; }
-        /* line 42, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
-        .post .post__header .post__info .post__category:not(:last-of-type):after, .post .post__header .post__info .post__likes:not(:last-of-type):after, .post .post__header .post__info .post__comments:not(:last-of-type):after {
+        /* line 48, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+        .post .post__header .post__info .info_item:not(:last-of-type):after {
           content: '';
           padding-right: 10px;
           border-right: 1px solid #ebebeb; }
-      /* line 46, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+        @media (max-width: 767px) {
+          .post .post__header .post__info .info_item {
+            width: 100%;
+            padding: 0; }
+            /* line 55, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+            .post .post__header .post__info .info_item:first-of-type {
+              padding-left: 0; } }
+      /* line 57, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
       .post .post__header .post__info .post__likes {
         position: relative;
         padding-left: 17px;
         cursor: pointer; }
-        /* line 50, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+        /* line 61, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
         .post .post__header .post__info .post__likes:before {
           content: '';
-          background-image: url("../img/likes__icon.png");
+          background-image: url(../img/likes__icon.png);
           width: 18px;
           height: 14px;
           display: inline-block;
@@ -247,15 +267,15 @@ body {
           position: absolute;
           top: 10px;
           left: -5px; }
-      /* line 60, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+      /* line 71, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
       .post .post__header .post__info .post__comments {
         position: relative;
         padding-left: 17px;
         cursor: pointer; }
-        /* line 64, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+        /* line 75, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
         .post .post__header .post__info .post__comments:before {
           content: '';
-          background-image: url("../img/comments__icon.png");
+          background-image: url(../img/comments__icon.png);
           width: 16px;
           height: 14px;
           display: inline-block;
@@ -263,48 +283,48 @@ body {
           position: absolute;
           top: 11px;
           left: -5px; }
-  /* line 74, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+  /* line 85, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
   .post .post__body {
     margin: 25px 10px; }
-    /* line 76, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+    /* line 87, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
     .post .post__body .post__header {
-      margin: 0 0 20px 0;
+      margin: 0 0 20px;
       font-size: 30px;
       font-weight: bold; }
-    /* line 81, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+    /* line 92, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
     .post .post__body .body__par {
       color: #bbb;
-      margin: 0 0 30px 0;
+      margin: 0 0 30px;
       font-size: 16px; }
-      /* line 86, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+      /* line 96, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
       .post .post__body .body__par .post__img {
         display: block;
         width: 90%;
         margin: auto; }
-    /* line 90, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+    /* line 100, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
     .post .post__body .post__tags {
       padding: 0 0 30px 5px;
       border-bottom: 1px solid #ebebeb; }
-      /* line 93, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+      /* line 103, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
       .post .post__body .post__tags .tags__title {
-        margin: 0 10px 0 0;
+        margin: 0 10px 0;
         font-size: 18px;
         font-weight: bold; }
-      /* line 98, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+      /* line 108, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
       .post .post__body .post__tags .tags__list {
         display: inline-block; }
-        /* line 100, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+        /* line 110, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
         .post .post__body .post__tags .tags__list .tag__item {
           display: inline-block;
           margin: 0 3px 0 0; }
-    /* line 103, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+    /* line 113, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
     .post .post__body .post__footer {
       display: inline-block;
       height: 90px;
       line-height: 90px;
       width: 100%;
       border-bottom: 2px solid #e6e6e6; }
-      /* line 109, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+      /* line 119, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
       .post .post__body .post__footer .body__comments {
         display: inline-block;
         font-size: 24px;
@@ -312,11 +332,11 @@ body {
         @media (max-width: 767px) {
           .post .post__body .post__footer .body__comments {
             font-size: 18px; } }
-      /* line 116, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+      /* line 126, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
       .post .post__body .post__footer .next__story {
         float: right;
         height: 100%; }
-        /* line 119, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
+        /* line 129, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_post */
         .post .post__body .post__footer .next__story .btn {
           font-size: 16px;
           font-weight: normal; }
@@ -329,85 +349,47 @@ body {
   text-align: center;
   border-bottom: 2px solid #e6e6e6;
   padding-bottom: 30px; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .comment__form {
-      width: 95%; } }
-  @media (max-width: 767px) {
-    .comment__form {
-      width: 95%; } }
-  /* line 10, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
-  .comment__form .col1 {
-    width: 27%; }
-    @media (max-width: 767px) {
-      .comment__form .col1 {
-        width: 21%; } }
-  /* line 14, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
-  .comment__form .col2 {
-    width: 40%; }
-    @media (max-width: 767px) {
-      .comment__form .col2 {
-        width: 50%; } }
-  /* line 18, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
-  .comment__form .label__left {
-    padding-right: 2%;
-    text-align: right; }
-  /* line 21, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
-  .comment__form .label__right {
-    padding-left: 2%;
-    text-align: left; }
-  /* line 24, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
-  .comment__form .form__row {
-    margin: 0 0 15px 0;
-    position: relative; }
-    /* line 27, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
-    .comment__form .form__row .comments__ta {
-      height: 200px; }
-  /* line 29, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
-  .comment__form .input__wrap {
-    display: inline-block;
-    text-align: left; }
-    /* line 32, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
-    .comment__form .input__wrap .input {
-      width: 40%; }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        .comment__form .input__wrap .input {
-          width: 39%; } }
-      @media (max-width: 767px) {
-        .comment__form .input__wrap .input {
-          width: 32%; } }
-      /* line 38, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
-      .comment__form .input__wrap .input:nth-child(odd) {
-        float: right; }
-  /* line 40, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
-  .comment__form .textarea__wrap {
-    display: inline-block; }
-    /* line 42, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
-    .comment__form .textarea__wrap .textarea {
-      width: calc(100% - 30px); }
-  /* line 44, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
-  .comment__form .textarea__label {
-    position: absolute;
-    transform: translate(-102%, 0); }
-  /* line 47, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+  /* line 6, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
   .comment__form .form__title {
     padding-bottom: 30px;
     font-size: 24px;
     font-weight: bold; }
+  /* line 11, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+  .comment__form .row {
+    text-align: left; }
+    @media (max-width: 767px) {
+      .comment__form .row {
+        text-align: center; } }
+  /* line 15, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+  .comment__form .control-field {
+    padding-bottom: 10px; }
+    /* line 17, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+    .comment__form .control-field .label {
+      width: 20%; }
+      @media (max-width: 767px) {
+        .comment__form .control-field .label {
+          width: 100%; } }
+    /* line 21, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+    .comment__form .control-field .input, .comment__form .control-field .textarea {
+      width: 55%; }
+    /* line 23, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+    .comment__form .control-field .textarea {
+      height: 200px; }
+    /* line 25, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+    .comment__form .control-field .textarea__label {
+      vertical-align: top; }
+  /* line 27, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+  .comment__form .btn {
+    width: 59%; }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .comments {
-    width: 90%; } }
-@media (max-width: 767px) {
-  .comments {
-    width: 90%; } }
-/* line 60, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+/* line 32, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
 .comments .comment__item {
   padding-top: 6%; }
   @media (max-width: 767px) {
     .comments .comment__item {
       position: relative;
       text-align: center; } }
-  /* line 65, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+  /* line 37, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
   .comments .comment__item .comment__avatar {
     display: inline-block;
     width: 115px;
@@ -423,7 +405,7 @@ body {
         width: 57px;
         height: 57px;
         transform: none; } }
-  /* line 79, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+  /* line 51, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
   .comments .comment__item .comment__wrap {
     display: inline-block;
     width: 80%;
@@ -431,23 +413,29 @@ body {
     @media (max-width: 767px) {
       .comments .comment__item .comment__wrap {
         text-align: left; } }
-    /* line 85, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+    /* line 57, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
     .comments .comment__item .comment__wrap .comment__author {
       margin-bottom: 20px;
       font-size: 24px;
       font-weight: bold; }
-    /* line 90, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+    /* line 62, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
     .comments .comment__item .comment__wrap .comment__body {
       padding: 17px 13px;
       background-color: #ebebeb;
       border-radius: 3px;
       color: #565656;
       font-size: 16px; }
-    /* line 97, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+    /* line 68, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
     .comments .comment__item .comment__wrap .reply__btn {
       display: block;
       margin: 15px; }
-/* line 100, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
+/* line 71, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_comment */
 .comments .more_comments__btn {
   display: block;
   margin: 60px auto; }
+
+/* line 1, /Users/sergiirudenko/Projects/html-makeups/first-blg/sass/_footer */
+.footer {
+  text-align: center;
+  margin: 40px auto;
+  color: #c6c6c6; }

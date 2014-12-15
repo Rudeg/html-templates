@@ -35,6 +35,8 @@ header
         margin: 0 auto
         @include mobile
             +vertical-align(42%)
+        @include sup-mobile
+            +vertical-align(34%)
         &:after
             content: ''
             display: inline-block
@@ -46,28 +48,44 @@ header
         @extend %in
         +vertical-align(65%)
         text-align: left
+        height: 46px
+        line-height: 46px
+
         @include mobile
-            +vertical-align(53%)
+            +vertical-align(40%)
         @include sup-mobile
-            +vertical-align(45%)
+            +vertical-align(34%)
 
         .nav__menu, .nav_socials
             display: inline-block
             @extend %justify-align
-            vertical-align: text-top
             li
                 display: inline-block
                 a
                     color: #fff
                     text-decoration: none
+            @include mobile
+                &:after
+                    display: none
         .nav__menu
-            width: 60%
+            width: 65%
             margin-left: 3%
+            @include mobile
+                width: 100%
+                margin-left: 0
+                text-align: center
+                li
+                    width: 45%
         .nav_socials
             vertical-align: top
             float: right
+            display: inline-block
             line-height: 32px
             text-align: center
+            @include mobile
+                float: none
+                width: 100%
+                margin-top: 10px
             li
                 cursor: pointer
                 +hexagon-s(-13px, 3px, 26px, 5px, #3c70b6)
@@ -84,7 +102,7 @@ header
                     background-image: url(../img/icon_fb.png)
                     width: 12px
                     height: 23px
-                    left: 40%
+                    left: 13px
                     top: -2px
             .item__tw
                 background-color: #47afce
@@ -93,7 +111,7 @@ header
                     background-image: url(../img/icon_tw.png)
                     width: 22px
                     height: 16px
-                    left: 20%
+                    left: 8px
             .item__pi
                 background-color: #ea4c89
                 +hexagon-color-s(#ea4c89)
@@ -115,7 +133,8 @@ header
         .logo
             display: inline-block
             position: static
-            transform: none
-            vertical-align: middle
-            width: 34px
-            height: 38px
+            transform: translate(0, -75%)
+            width: 36px
+            height: 42px
+            @include mobile
+                display: none
