@@ -70,6 +70,22 @@ header
         .nav__menu
             width: 65%
             margin-left: 3%
+            a
+                position: relative
+                &:hover:after
+                    opacity: 1
+                &:after
+                    content: ''
+                    position: absolute
+                    top: 100%
+                    left: 0
+                    width: 100%
+                    height: 3px
+                    opacity: 0
+                    background: #fff
+                    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s
+                    -moz-transition: opacity 0.3s, -moz-transform 0.3s
+                    transition: opacity 0.3s, transform 0.3s
             @include mobile
                 width: 100%
                 margin-left: 0
@@ -77,13 +93,11 @@ header
                 li
                     width: 45%
         .nav_socials
-            vertical-align: top
-            float: right
             display: inline-block
-            line-height: 32px
             text-align: center
+            position: absolute
+            right: 0
             @include mobile
-                float: none
                 width: 100%
                 margin-top: 10px
             li
