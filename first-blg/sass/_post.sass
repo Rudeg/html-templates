@@ -1,8 +1,6 @@
 .post
     @extend %in
     margin-top: 60px
-    @include tablet
-        width: 60%
     .post__header
         position: relative
         .post__date
@@ -12,29 +10,37 @@
             width: 110px
             line-height: 110px
             text-align: center
-            border: 7px solid #ebebeb
+            border: 7px solid $border
             border-radius: 50%
             color: $main
             font:
                 size: 30px
                 weight: bold
+            @include tablet
+                right: 0
+                transform: translate(50%)
+                font-size: 16px
+                line-height: 50px
+                height: 50px
+                width: 50px
             @include mobile
-                transform: translate(-100%, 6%)
                 height: 43px
                 width: 43px
+                right: 0
                 line-height: 43px
-                border: 3px solid #ebebeb
+                border: 3px solid $border
                 font-size: 14px
+                transform: none
         .post__info
             height: 32px
             line-height: 35px
             color: #cacaca
             font-size: 14px
-            border-bottom: 1px solid #ebebeb
+            border-bottom: 1px solid $border
             @include mobile
                 font-size: 10px
-            .post__category,
-            .post__likes, .post__comments
+                height: 100%
+            .info_item
                 display: inline-block
                 padding: 0 10px 0 0
                 &:first-of-type
@@ -42,14 +48,19 @@
                 &:not(:last-of-type):after
                     content: ''
                     padding-right: 10px
-                    border-right: 1px solid #ebebeb
+                    border-right: 1px solid $border
+                @include mobile
+                    width: 100%
+                    padding: 0
+                    &:first-of-type
+                        padding-left: 0
             .post__likes
                 position: relative
                 padding-left: 17px
                 cursor: pointer
                 &:before
                     content: ''
-                    background-image: url("../img/likes__icon.png")
+                    background-image: url(../img/likes__icon.png)
                     width: 18px
                     height: 14px
                     display: inline-block
@@ -63,7 +74,7 @@
                 cursor: pointer
                 &:before
                     content: ''
-                    background-image: url("../img/comments__icon.png")
+                    background-image: url(../img/comments__icon.png)
                     width: 16px
                     height: 14px
                     display: inline-block
@@ -74,24 +85,23 @@
     .post__body
         margin: 25px 10px
         .post__header
-            margin: 0 0 20px 0
+            margin: 0 0 20px
             font:
                 size: 30px
                 weight: bold
         .body__par
             color: #bbb
-            margin: 0 0 30px 0
-            font:
-                size: 16px
+            margin: 0 0 30px
+            font-size: 16px
             .post__img
                 display: block
                 width: 90%
                 margin: auto
         .post__tags
             padding: 0 0 30px 5px
-            border-bottom: 1px solid #ebebeb
+            border-bottom: 1px solid $border
             .tags__title
-                margin: 0 10px 0 0
+                margin: 0 10px 0
                 font:
                     size: 18px
                     weight: bold

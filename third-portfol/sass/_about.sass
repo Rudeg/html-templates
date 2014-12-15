@@ -17,6 +17,7 @@
     .img__list
         @extend %justify-align
         width: 325px
+        max-width: 90%
         margin: 0 auto
         padding: 100px 0 30px
     .who__title
@@ -36,5 +37,6 @@
         width: 50%
         margin: 0 auto
         font-size: 14px
-        @include mobile
+    @include mobile
+        .who__text
             width: 90%

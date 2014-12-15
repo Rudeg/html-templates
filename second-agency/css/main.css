@@ -45,35 +45,42 @@ table {
   border-collapse: collapse;
   width: 100%; }
 
-/* line 5, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_mixins */
-.header .header__wrap, .header .nav__list, .promo .promo__info, .who-we-are .who_wrap, .work .work__wrap, .hiring .hiring__info {
+/* line 21, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_mixins */
+.topline .topline_wrap, .header .header__wrap, .who-we-are .who_wrap, .work .work__wrap, .hiring .hiring__info, footer .footer__info, footer .footer__copy, footer .footer__copy .copy__wrap {
+  width: 75%;
+  margin: 0 auto; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .topline .topline_wrap, .header .header__wrap, .who-we-are .who_wrap, .work .work__wrap, .hiring .hiring__info, footer .footer__info, footer .footer__copy, footer .footer__copy .copy__wrap {
+      width: 83%; } }
+  @media (max-width: 767px) {
+    .topline .topline_wrap, .header .header__wrap, .who-we-are .who_wrap, .work .work__wrap, .hiring .hiring__info, footer .footer__info, footer .footer__copy, footer .footer__copy .copy__wrap {
+      width: 90%; } }
+
+/* line 29, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_mixins */
+.header .header__wrap, .promo .promo__info, .who-we-are .who_wrap, .work .work__wrap, .hiring .hiring__info {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-/* line 12, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_mixins */
+/* line 36, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_mixins */
 .who-we-are .who_wrap .quality, .work .work__wrap .w__big_items, .work .work__wrap .w__small_items, footer .footer__info {
   text-align: justify; }
-  /* line 14, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_mixins */
+  /* line 38, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_mixins */
   .who-we-are .who_wrap .quality:after, .work .work__wrap .w__big_items:after, .work .work__wrap .w__small_items:after, footer .footer__info:after {
     content: "";
     width: 100%;
     display: inline-block; }
 
-/* line 5, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_layout */
-.topline .topline_wrap, .header .header__wrap, .who-we-are .who_wrap, .work .work__wrap, .hiring .hiring__info, footer .footer__info, footer .footer__copy, footer .footer__copy .copy__wrap {
-  width: 75%;
-  margin: 0 auto; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .topline .topline_wrap, .header .header__wrap, .who-we-are .who_wrap, .work .work__wrap, .hiring .hiring__info, footer .footer__info, footer .footer__copy, footer .footer__copy .copy__wrap {
-      width: 87%; } }
-  @media (max-width: 767px) {
-    .topline .topline_wrap, .header .header__wrap, .who-we-are .who_wrap, .work .work__wrap, .hiring .hiring__info, footer .footer__info, footer .footer__copy, footer .footer__copy .copy__wrap {
-      width: 90%; } }
+/* line 43, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_mixins */
+.header .header__wrap .header__logo {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
-/* line 13, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_layout */
+/* line 1, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_layout */
 body {
   width: 100%;
   font-family: sans-serif; }
@@ -107,15 +114,18 @@ body {
   color: #506a85;
   font-size: 40px;
   font-weight: 200; }
+  @media (max-width: 767px) {
+    .title {
+      font-size: 28px; } }
 
-/* line 29, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_common */
+/* line 31, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_common */
 .link {
   cursor: pointer; }
-  /* line 31, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_common */
+  /* line 33, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_common */
   .link:hover {
     color: #00bc9c; }
 
-/* line 34, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_common */
+/* line 36, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_common */
 .input {
   padding: 12px 10px;
   background-color: #4e5c6c;
@@ -125,120 +135,127 @@ body {
 
 /* line 1, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
 .topline {
-  height: 40px;
+  min-height: 40px;
   line-height: 40px;
   color: #6e849b;
   background-color: #f5f7fa;
   border-bottom: 1px solid #e6e9ed;
   font-size: 12px; }
-  /* line 10, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-  .topline .topline_wrap .topline__email, .topline .topline_wrap .topline__phone, .topline .topline_wrap .socials {
-    display: inline-block; }
-  /* line 13, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-  .topline .topline_wrap .topline__email:before, .topline .topline_wrap .topline__phone:before {
-    display: inline-block;
-    content: '';
-    margin-right: 8px; }
-  /* line 17, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-  .topline .topline_wrap .topline__email {
-    margin-right: 25px; }
-    /* line 19, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-    .topline .topline_wrap .topline__email:before {
-      background-image: url('../img/icon_mail.png');
-      height: 9px;
-      width: 11px; }
-  /* line 24, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-  .topline .topline_wrap .topline__phone:before {
-    background-image: url('../img/icon_phone.png');
-    height: 13px;
-    width: 7px;
-    transform: translate(0, 15%); }
-  /* line 29, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-  .topline .topline_wrap .socials {
-    float: right; }
-    /* line 32, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-    .topline .topline_wrap .socials .social__fb, .topline .topline_wrap .socials .social__gp, .topline .topline_wrap .socials .social__tw, .topline .topline_wrap .socials .social__pi, .topline .topline_wrap .socials .social__ba, .topline .topline_wrap .socials .social__bl {
+  /* line 8, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+  .topline .topline_wrap {
+    position: relative; }
+    /* line 11, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+    .topline .topline_wrap .topline__email, .topline .topline_wrap .topline__phone, .topline .topline_wrap .socials {
+      display: inline-block; }
+    /* line 14, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+    .topline .topline_wrap .topline__email:before, .topline .topline_wrap .topline__phone:before {
+      content: '';
       display: inline-block;
-      margin: 0 7px; }
-    /* line 35, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-    .topline .topline_wrap .socials .social__fb {
-      background-image: url("../img/icon_fb.png");
+      margin-right: 8px; }
+    /* line 18, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+    .topline .topline_wrap .topline__email {
+      margin-right: 25px; }
+      @media (max-width: 767px) {
+        .topline .topline_wrap .topline__email {
+          display: block; } }
+      /* line 22, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+      .topline .topline_wrap .topline__email:before {
+        background-image: url('../img/icon_mail.png');
+        height: 9px;
+        width: 11px; }
+    /* line 27, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+    .topline .topline_wrap .topline__phone:before {
+      background-image: url('../img/icon_phone.png');
+      height: 13px;
       width: 7px;
-      height: 13px; }
-    /* line 39, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-    .topline .topline_wrap .socials .social__gp {
-      background-image: url("../img/icon_gp.png");
-      width: 11px;
-      height: 11px; }
-    /* line 43, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-    .topline .topline_wrap .socials .social__tw {
-      background-image: url("../img/icon_tw.png");
-      width: 11px;
-      height: 9px; }
-    /* line 47, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-    .topline .topline_wrap .socials .social__pi {
-      background-image: url("../img/icon_pi.png");
-      width: 9px;
-      height: 11px; }
-    /* line 51, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-    .topline .topline_wrap .socials .social__ba {
-      background-image: url("../img/icon_ba.png");
-      width: 13px;
-      height: 10px; }
-    /* line 55, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-    .topline .topline_wrap .socials .social__bl {
-      background-image: url("../img/icon_bl.png");
-      width: 12px;
-      height: 11px; }
+      transform: translate(0, 15%); }
+    /* line 32, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+    .topline .topline_wrap .socials {
+      position: absolute;
+      right: 5px;
+      top: 0; }
+      /* line 36, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+      .topline .topline_wrap .socials .social_item {
+        display: inline-block;
+        margin: 0 7px; }
+      /* line 39, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+      .topline .topline_wrap .socials .social__fb {
+        background-image: url("../img/icon_fb.png");
+        width: 7px;
+        height: 13px; }
+      /* line 43, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+      .topline .topline_wrap .socials .social__gp {
+        background-image: url("../img/icon_gp.png");
+        width: 11px;
+        height: 11px; }
+      /* line 47, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+      .topline .topline_wrap .socials .social__tw {
+        background-image: url("../img/icon_tw.png");
+        width: 11px;
+        height: 9px; }
+      /* line 51, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+      .topline .topline_wrap .socials .social__pi {
+        background-image: url("../img/icon_pi.png");
+        width: 9px;
+        height: 11px; }
+      /* line 55, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+      .topline .topline_wrap .socials .social__ba {
+        background-image: url("../img/icon_ba.png");
+        width: 13px;
+        height: 10px; }
+      /* line 59, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+      .topline .topline_wrap .socials .social__bl {
+        background-image: url("../img/icon_bl.png");
+        width: 12px;
+        height: 11px; }
 
-/* line 59, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+/* line 63, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
 .header {
   height: 110px;
   border-bottom: 1px solid #e6e9ed; }
-  /* line 65, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+  @media (max-width: 767px) {
+    .header {
+      height: 100%;
+      overflow: auto; } }
+  /* line 72, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
   .header .header__wrap .header__logo {
     background-image: url("../img/logo.png");
     display: inline-block;
     width: 161px;
     height: 40px; }
-  /* line 70, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+    @media (max-width: 767px) {
+      .header .header__wrap .header__logo {
+        position: absolute;
+        width: 80px;
+        height: 20px;
+        top: 10px; } }
+  /* line 83, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
   .header .nav__list {
     display: inline-block;
-    width: 68%;
-    margin-left: 4%; }
-    @media (min-width: 768px) and (max-width: 1023px) {
-      .header .nav__list {
-        display: block;
-        width: 100%;
-        margin: 20px 0 0; } }
+    width: 70%;
+    margin-left: 4%;
+    text-align: right;
+    vertical-align: super; }
     @media (max-width: 767px) {
       .header .nav__list {
-        display: block;
-        width: 100%;
-        margin: 20px 0 0; } }
-    /* line 84, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+        float: right;
+        width: 100%; } }
+    /* line 92, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
     .header .nav__list li {
       display: inline-block;
       margin-right: 3%; }
-      /* line 87, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+      @media (max-width: 767px) {
+        .header .nav__list li {
+          width: 100%; } }
+      /* line 97, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
       .header .nav__list li a {
         color: #506a85;
         text-decoration: none;
         font-size: 15px;
         font-weight: bold; }
-        /* line 93, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
+        /* line 103, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
         .header .nav__list li a:hover {
           color: #00bc9c; }
-  /* line 95, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_header */
-  .header .header__search {
-    position: absolute;
-    right: 20px;
-    bottom: 12px;
-    background-image: url("../img/icon_search.png");
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    cursor: pointer; }
 
 /* line 1, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_promo */
 .promo {
@@ -264,12 +281,15 @@ body {
       text-transform: uppercase;
       font-size: 50px;
       font-weight: bold; }
-    /* line 23, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_promo */
+      @media (max-width: 767px) {
+        .promo .promo__info .promo__title {
+          font-size: 30px; } }
+    /* line 25, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_promo */
     .promo .promo__info .promo__text {
       margin-bottom: 50px;
       color: #a3b1bf;
       font-size: 15px; }
-    /* line 27, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_promo */
+    /* line 29, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_promo */
     .promo .promo__info .promo__btn {
       font-size: 12px;
       padding: 15px 40px; }
@@ -290,11 +310,12 @@ body {
       color: #73879c; }
       @media (max-width: 767px) {
         .who-we-are .who_wrap .who__info .who__desc {
+          width: 90%;
           margin-bottom: 30px; } }
     @media (max-width: 767px) {
       .who-we-are .who_wrap .quality {
         text-align: center; } }
-    /* line 20, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
+    /* line 21, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
     .who-we-are .who_wrap .quality .qual__item {
       display: inline-block;
       width: 25%; }
@@ -302,7 +323,7 @@ body {
         .who-we-are .who_wrap .quality .qual__item {
           width: 80%;
           margin-bottom: 15px; } }
-      /* line 26, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
+      /* line 27, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
       .who-we-are .who_wrap .quality .qual__item:before {
         content: '';
         position: absolute;
@@ -311,7 +332,7 @@ body {
           .who-we-are .who_wrap .quality .qual__item:before {
             left: calc(50% - 75px);
             transform: none; } }
-      /* line 33, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
+      /* line 34, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
       .who-we-are .who_wrap .quality .qual__item .qual__title {
         margin-bottom: 15px;
         color: #506a85;
@@ -320,13 +341,13 @@ body {
         @media (max-width: 767px) {
           .who-we-are .who_wrap .quality .qual__item .qual__title {
             margin-bottom: 7px; } }
-      /* line 41, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
+      /* line 42, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
       .who-we-are .who_wrap .quality .qual__item .qual__text {
         line-height: 18px;
         color: #73879c;
         font-size: 12px;
         font-weight: 200; }
-      /* line 47, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
+      /* line 48, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
       .who-we-are .who_wrap .quality .qual__item.qual__pass:before {
         background: url("../img/icon_heart.png");
         background-size: 100% 100%;
@@ -335,13 +356,13 @@ body {
         @media (max-width: 767px) {
           .who-we-are .who_wrap .quality .qual__item.qual__pass:before {
             transform: translate(-19%, 0); } }
-      /* line 54, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
+      /* line 55, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
       .who-we-are .who_wrap .quality .qual__item.qual__creat:before {
         background: url("../img/icon_lamp.png");
         background-size: 100% 100%;
         height: 30px;
         width: 22px; }
-      /* line 59, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
+      /* line 60, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_who */
       .who-we-are .who_wrap .quality .qual__item.qual__qual:before {
         background: url("../img/icon_start.png");
         background-size: 100% 100%;
@@ -366,30 +387,38 @@ body {
     .work .work__wrap .w__info {
       color: #73879c;
       margin-bottom: 40px; }
-    /* line 19, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+    @media (max-width: 767px) {
+      /* line 16, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+      .work .work__wrap .title, .work .work__wrap .w__info {
+        margin-bottom: 10px; }
+ }
+    /* line 23, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
     .work .work__wrap .w__big_items .item {
       display: inline-block;
       width: 48%;
       text-align: center;
       position: relative; }
-      /* line 24, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+      @media (max-width: 500px) {
+        .work .work__wrap .w__big_items .item {
+          width: 100%; } }
+      /* line 30, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
       .work .work__wrap .w__big_items .item:hover {
         background-color: #09b69b; }
-        /* line 26, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+        /* line 32, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
         .work .work__wrap .w__big_items .item:hover:after {
           content: '+';
           color: #fff;
           position: absolute;
           font-size: 22px;
           top: calc(50% - 60px); }
-        /* line 32, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+        /* line 38, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
         .work .work__wrap .w__big_items .item:hover .w__big {
           opacity: 0.2; }
-      /* line 34, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+      /* line 40, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
       .work .work__wrap .w__big_items .item .w__big {
         width: 100%;
         cursor: pointer; }
-      /* line 37, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+      /* line 43, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
       .work .work__wrap .w__big_items .item .item__content {
         border: 1px solid #e6e9ed;
         border-bottom: 2px solid #e6e9ed;
@@ -397,18 +426,18 @@ body {
         border-radius: 1px;
         background-color: #fff;
         margin-top: -3px; }
-        /* line 44, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+        /* line 50, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
         .work .work__wrap .w__big_items .item .item__content .title {
           font-size: 14px;
           font-weight: bold;
           padding: 15px 0 10px;
           margin-bottom: 0; }
-        /* line 50, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+        /* line 56, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
         .work .work__wrap .w__big_items .item .item__content .author {
           font-size: 12px;
           color: #73879c;
           padding-bottom: 15px; }
-    /* line 56, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+    /* line 62, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
     .work .work__wrap .w__small_items .item__s {
       display: inline-block;
       width: 21.7%;
@@ -417,39 +446,39 @@ body {
       @media (max-width: 500px) {
         .work .work__wrap .w__small_items .item__s {
           width: 48%; } }
-      /* line 63, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+      /* line 69, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
       .work .work__wrap .w__small_items .item__s:hover {
         background-color: #09b69b; }
-        /* line 65, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+        /* line 71, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
         .work .work__wrap .w__small_items .item__s:hover .content {
           display: inline-block;
           position: absolute;
           top: 50%;
           transform: translate(0, -50%); }
-        /* line 70, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+        /* line 76, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
         .work .work__wrap .w__small_items .item__s:hover .img {
           opacity: 0.2; }
-      /* line 72, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+      /* line 78, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
       .work .work__wrap .w__small_items .item__s .content {
         display: none;
         width: 100%;
         color: #fff;
         text-align: center; }
-        /* line 77, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+        /* line 83, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
         .work .work__wrap .w__small_items .item__s .content .s_title {
           font-size: 11px;
           padding-bottom: 10px; }
-        /* line 80, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+        /* line 86, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
         .work .work__wrap .w__small_items .item__s .content .author {
           font-size: 10px; }
-      /* line 82, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+      /* line 88, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
       .work .work__wrap .w__small_items .item__s .img {
         width: 100%; }
-    /* line 84, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+    /* line 90, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
     .work .work__wrap .w__pager {
       width: 60px;
       margin: 0 auto; }
-      /* line 87, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+      /* line 93, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
       .work .work__wrap .w__pager .page {
         display: inline-block;
         width: 10px;
@@ -457,9 +486,12 @@ body {
         background-color: #506a85;
         border-radius: 50%;
         cursor: pointer; }
-        /* line 94, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
+        /* line 100, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_work */
         .work .work__wrap .w__pager .page:hover {
           background-color: #00bc9c; }
+  @media (max-width: 767px) {
+    .work {
+      height: 1000px; } }
 
 /* line 1, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_hire */
 .hiring {
@@ -476,6 +508,11 @@ body {
       margin: 0 auto 40px;
       line-height: 1.5;
       color: #73879c; }
+  @media (max-width: 767px) {
+    /* line 17, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_hire */
+    .hiring .hiring__info .text {
+      width: 90%; }
+ }
 
 /* line 1, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
 footer {
@@ -501,84 +538,89 @@ footer {
           /* line 19, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
           footer .footer__info .info__block:nth-last-child(-n+2) {
             margin-top: 20px; } }
-      /* line 21, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+      @media (max-width: 500px) {
+        footer .footer__info .info__block {
+          width: 100%;
+          margin-top: 20px; } }
+      /* line 24, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
       footer .footer__info .info__block .info__title {
         color: #fff;
         font-size: 14px;
         text-transform: uppercase;
         padding-bottom: 15px; }
-      /* line 26, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+      /* line 29, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
       footer .footer__info .info__block .info__content {
         line-height: 1.5;
         font-size: 12px; }
-        /* line 30, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+        /* line 33, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
         footer .footer__info .info__block .info__content .address, footer .footer__info .info__block .info__content .phone, footer .footer__info .info__block .info__content .email {
           padding-left: 15px;
           line-height: 18px; }
-          /* line 33, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+          /* line 36, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
           footer .footer__info .info__block .info__content .address:before, footer .footer__info .info__block .info__content .phone:before, footer .footer__info .info__block .info__content .email:before {
             content: '';
             display: inline-block;
             position: absolute; }
-        /* line 37, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+        /* line 40, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
         footer .footer__info .info__block .info__content .address {
           padding-top: 15px; }
-          /* line 39, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+          /* line 42, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
           footer .footer__info .info__block .info__content .address:before {
             background-image: url('../img/icon_geo.png');
             height: 12px;
             width: 7px;
             transform: translate(-200%, 15%); }
-        /* line 45, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+        /* line 48, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
         footer .footer__info .info__block .info__content .phone:before {
           background-image: url('../img/icon_phone.png');
           height: 13px;
           width: 7px;
           transform: translate(-200%, 15%); }
-        /* line 51, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+        /* line 54, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
         footer .footer__info .info__block .info__content .email:before {
           background-image: url('../img/icon_mail.png');
           height: 9px;
           width: 11px;
           transform: translate(-145%, 44%); }
-        /* line 56, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+        /* line 59, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
         footer .footer__info .info__block .info__content .adress {
           padding-top: 10px; }
-        /* line 58, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+        /* line 61, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
         footer .footer__info .info__block .info__content .more__link {
           display: inline-block;
           margin-top: 10px; }
-          /* line 61, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+          /* line 64, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
           footer .footer__info .info__block .info__content .more__link:after {
             content: "\2192";
             padding-left: 5px; }
-        /* line 64, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+        /* line 67, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
         footer .footer__info .info__block .info__content .subscribe {
           padding-top: 15px;
-          position: relative; }
-          /* line 67, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+          position: relative;
+          width: 90%; }
+          /* line 71, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
           footer .footer__info .info__block .info__content .subscribe .input {
             width: 100%;
             display: inline-block; }
-          /* line 70, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+          /* line 74, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
           footer .footer__info .info__block .info__content .subscribe .btn {
             position: absolute;
             top: 21px;
             right: -12px;
             padding: 5px 7px;
             font-size: 12px; }
-      /* line 77, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+      /* line 81, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
       footer .footer__info .info__block .img__grid .img {
         cursor: pointer;
         width: 48.9%; }
-      /* line 80, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+      /* line 84, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
       footer .footer__info .info__block .logo {
         background-image: url("../img/footer_logo.png");
         display: inline-block;
         width: 129px;
         height: 32px;
         margin-bottom: 10px; }
-  /* line 87, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+  /* line 91, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
   footer .footer__copy {
     width: 100%;
     background-color: #283645;
@@ -591,14 +633,15 @@ footer {
         height: 100%;
         line-height: 1;
         overflow: auto; } }
-    /* line 100, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+    /* line 104, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
     footer .footer__copy .copyright {
       display: inline-block;
       font-size: 10px; }
       @media (max-width: 767px) {
         footer .footer__copy .copyright {
+          display: block;
           line-height: 25px; } }
-    /* line 105, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+    /* line 110, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
     footer .footer__copy .nav__list {
       display: inline-block;
       float: right;
@@ -606,22 +649,27 @@ footer {
       text-align: right; }
       @media (max-width: 767px) {
         footer .footer__copy .nav__list {
+          line-height: 25px;
+          width: 60%; } }
+      @media (max-width: 500px) {
+        footer .footer__copy .nav__list {
+          width: 100%;
           line-height: 25px; } }
-      /* line 112, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+      /* line 121, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
       footer .footer__copy .nav__list li {
         display: inline-block;
         position: relative;
         margin-left: 4%; }
-        /* line 116, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+        /* line 125, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
         footer .footer__copy .nav__list li:not(:last-child):after {
           content: '.';
           position: absolute;
           top: -3px;
           right: -9px; }
-        /* line 121, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+        /* line 130, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
         footer .footer__copy .nav__list li a {
           color: #707e8c;
           text-decoration: none; }
-          /* line 124, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
+          /* line 133, /Users/sergiirudenko/Projects/html-makeups/second-agency/sass/_footer */
           footer .footer__copy .nav__list li a:hover {
             color: #00bc9c; }

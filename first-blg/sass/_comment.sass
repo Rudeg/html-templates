@@ -1,62 +1,34 @@
 .comment__form
     @extend %in
     text-align: center
-    border-bottom: 2px solid #e6e6e6
+    border-bottom: 2px solid $form-border
     padding-bottom: 30px
-    @include tablet
-        width: 95%
-    @include mobile
-        width: 95%
-    .col1
-        width: 27%
-        @include mobile
-            width: 21%
-    .col2
-        width: 40%
-        @include mobile
-            width: 50%
-    .label__left
-        padding-right: 2%
-        text-align: right
-    .label__right
-        padding-left: 2%
-        text-align: left
-    .form__row
-        margin: 0 0 15px 0
-        position: relative
-        .comments__ta
-            height: 200px
-    .input__wrap
-        display: inline-block
-        text-align: left
-        .input
-            width: 40%
-            @include tablet
-                width: 39%
-            @include mobile
-                width: 32%
-            &:nth-child(odd)
-                float: right
-    .textarea__wrap
-        display: inline-block
-        .textarea
-            width: calc(100% - 30px)
-    .textarea__label
-        position: absolute
-        transform: translate(-102%, 0)
     .form__title
         padding-bottom: 30px
         font:
             size: 24px
             weight: bold
-
+    .row
+        text-align: left
+        @include mobile
+            text-align: center
+    .control-field
+        padding-bottom: 10px
+        .label
+            width: 20%
+            @include mobile
+                width: 100%
+        .input, .textarea
+            width: 55%
+        .textarea
+            height: 200px
+        .textarea__label
+            vertical-align: top
+    .btn
+        width: 59%
 
 .comments
     @extend %in
-    @include tablet
-        width: 90%
-    @include mobile
-        width: 90%
     .comment__item
         padding-top: 6%
         @include mobile
@@ -67,7 +39,7 @@
             width: 115px
             height: 115px
             transform: translate(0, -94%)
-            background-color: #ebebeb
+            background-color: $border
             border-radius: 50%
             @include mobile
                 position: absolute
@@ -89,11 +61,10 @@
                     weight: bold
             .comment__body
                 padding: 17px 13px
-                background-color: #ebebeb
+                background-color: $border
                 border-radius: 3px
-                color: #565656
-                font:
-                    size: 16px
+                color: $comment-text
+                font-size: 16px
             .reply__btn
                 display: block
                 margin: 15px

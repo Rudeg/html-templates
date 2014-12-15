@@ -1,14 +1,8 @@
-$main: #3eb3a5
-
-$mobile: "(max-width: 767px)"
-$tablet: "(min-width: 768px) and (max-width: 1023px)"
-$desktop: "(min-width: 1024px)"
-
 .link
     text-decoration: none
     color: $main
     &:hover
-        color: #079281
+        color: $main_h
 
 .btn
     color: #fff
@@ -19,11 +13,11 @@ $desktop: "(min-width: 1024px)"
         size: 18px
         weight: bold
     &:hover
-        background-color: #079281
+        background-color: $main_h
 
 .label
     display: inline-block
-    color: #8e8e8e
+    color: $gray
     cursor: pointer
     font:
         size: 12px
@@ -33,8 +27,8 @@ $desktop: "(min-width: 1024px)"
     padding: 15px
     border: none
     border-radius: 3px
-    color: #888b8b
-    background-color: #ebebeb
+    color: $gray
+    background-color: $border
 
 .textarea
     resize: none

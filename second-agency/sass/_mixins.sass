@@ -2,6 +2,30 @@ $desktop-width: 1024px
 $tablet-width: 768px
 $sup-mobile: 500px
 
+@mixin tablet
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+        @content
+
+@mixin mobile
+    @media (max-width: #{$tablet-width - 1px})
+        @content
+
+@mixin sup-mobile
+    @media (max-width: #{$sup-mobile})
+        @content
+
+%out
+    width: 100%
+    margin: 0 auto
+
+%in
+    width: 75%
+    margin: 0 auto
+    @include tablet
+        width: 83%
+    @include mobile
+        width: 90%
+
 %vertical-align
     position: relative
     top: 50%
@@ -16,14 +40,8 @@ $sup-mobile: 500px
         width: 100%
         display: inline-block
 
-@mixin tablet
-    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
-        @content
-
-@mixin mobile
-    @media (max-width: #{$tablet-width - 1px})
-        @content
-
-@mixin sup-mobile
-    @media (max-width: #{$sup-mobile})
-        @content
+%cover-bg
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover

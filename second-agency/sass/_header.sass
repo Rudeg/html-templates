@@ -1,5 +1,5 @@
 .topline
-    height: 40px
+    min-height: 40px
     line-height: 40px
     color: #6e849b
     background-color: #f5f7fa
@@ -7,15 +7,18 @@
     font-size: 12px
     .topline_wrap
         @extend %in
+        position: relative
         .topline__email, .topline__phone, .socials
             display: inline-block
         .topline__email, .topline__phone
             &:before
-                display: inline-block
                 content: ''
+                display: inline-block
                 margin-right: 8px
         .topline__email
             margin-right: 25px
+            @include mobile
+                display: block
             &:before
                 background-image: url('../img/icon_mail.png')
                 height: 9px
@@ -27,9 +30,10 @@
                 width: 7px
                 transform: translate(0, 15%)
         .socials
-            float: right
-            .social__fb, .social__gp, .social__tw,
-            .social__pi, .social__ba,.social__bl
+            position: absolute
+            right: 5px
+            top: 0
+            .social_item
                 display: inline-block
                 margin: 0 7px
             .social__fb
@@ -59,6 +63,9 @@
 .header
     height: 110px
     border-bottom: 1px solid #e6e9ed
+    @include mobile
+        height: 100%
+        overflow: auto
     .header__wrap
         @extend %in
         @extend %vertical-align
@@ -67,23 +74,26 @@
             display: inline-block
             width: 161px
             height: 40px
+            @include mobile
+                @extend %cover-bg
+                position: absolute
+                width: 80px
+                height: 20px
+                top: 10px
     .nav__list
         display: inline-block
-        @extend %vertical-align
-        width: 68%
+        width: 70%
         margin-left: 4%
-        @include tablet
-            display: block
-            width: 100%
-            margin: 20px 0 0
+        text-align: right
+        vertical-align: super
         @include mobile
-            display: block
+            float: right
             width: 100%
-            margin: 20px 0 0
-
         li
             display: inline-block
             margin-right: 3%
+            @include mobile
+                width: 100%
             a
                 color: #506a85
                 text-decoration: none
@@ -92,12 +102,3 @@
                     weight: bold
                 &:hover
                     color: #00bc9c
-    .header__search
-        position: absolute
-        right: 20px
-        bottom: 12px
-        background-image: url("../img/icon_search.png")
-        display: inline-block
-        width: 12px
-        height: 12px
-        cursor: pointer
